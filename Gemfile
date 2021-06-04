@@ -27,8 +27,12 @@ gem 'jbuilder', '~> 2.7'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.4', require: false
-gem 'devise', '~> 4.7', '>= 4.7.3'
+gem 'devise', github: 'heartcombo/devise'
 gem 'carrierwave', '~> 2.0'
+gem "omniauth", "~> 1.9.1"
+gem 'omniauth-facebook'
+gem 'activeadmin'
+gem 'rexml'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -43,12 +47,28 @@ group :development do
   gem 'rack-mini-profiler', '~> 2.0'
 end
 
+group :development, :test do
+  gem 'rspec-rails', '~> 5.0.0'
+  gem 'factory_bot_rails'
+end
+
 group :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 3.26'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
+  gem 'shoulda'
+  gem 'shoulda-callback-matchers'
+  gem 'shoulda-matchers'
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
+  gem 'database_cleaner'
+  gem 'launchy'
+  gem 'timecop'
+  gem 'simplecov'
+  gem 'faker'
+  gem 'rails-controller-testing'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
