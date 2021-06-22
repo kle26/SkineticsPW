@@ -10,6 +10,6 @@ Scenario: I am a user that i want to sign up
     And I fill in "Email" with "klelia@gmail.com"
     And I fill in "Password" with "123456"
     And I fill in "Conferma Password" with "123456"
-    And I click in "Appassionato"
+    And I click in "appassionato"
     And I press "Registrati"
     Then I should be on the home page

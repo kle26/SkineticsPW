@@ -12,3 +12,12 @@ When('I fill in {string} with {string}') do |field, value|
 	fill_in(field, :with => value)
   #pending # Write code here that turns the phrase above into concrete actions
 end
+
+When('I click in {string}') do |field|
+  choose("user_role_#{field}")
+end
+
+When('I press {string}') do |button|
+    click_button(button)
+end
+

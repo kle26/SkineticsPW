@@ -1,7 +1,9 @@
 Feature: Appassionato can add a review
 
 Scenario: Appassionato add a review
-    Given a user
+    Given a user appassionato
+    Given a user dermatologo
+    Given a prodotto
     Given a review
 
     When I am on the home page
@@ -19,6 +21,6 @@ Scenario: Appassionato add a review
     When I follow "Visualizza"
     Then I should be on the Show Prodotto page
 
-    When I fill in "Inserisci recensione" with "Prodotto molto buono"
+    When I fill in "review" with "Prodotto molto buono"
     And I press "Inserisci"
     Then I should show a review
